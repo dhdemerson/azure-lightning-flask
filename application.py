@@ -1,6 +1,7 @@
 """Application factory and configuration for azure_lightning_flask applications"""
 
 from logging import getLogger, StreamHandler
+from warnings import warn
 from flask import Flask
 from flask_env import MetaFlaskEnv
 from azure_lightning_flask.application_blueprint import application_blueprint
@@ -19,6 +20,17 @@ def create_app(config=Configuration):
     app = Flask(__name__)
 
     app.config.from_object(config)
+
+    required_environment_variables = [
+        'AZURE_STORAGE_ACCOUNT',
+        'AZURE_STORAGE_KEY',
+        'APP_NAME',
+    ]
+
+    for required_environment_variable in required_environment_variables:
+        if not app.config.get(required_environment_variable):
+            warning = "Environment variable {0} must be set!".format(required_environment_variable)
+            warn(warning)
 
     # Setup logging for Azure network requests
     azure_logger = getLogger('azure.storage.common.storageclient')
