@@ -4,7 +4,7 @@ import unittest
 from mock import patch
 from azure_lightning_flask.application import create_app
 from azure_lightning_flask.helpers import format_row_key, get_table_service
-from azure_lightning_flask.tests.test_config import TestConfig
+from tests.test_config import TestConfig
 
 class TestFormatRowKey(unittest.TestCase):
     """Tests for the format_row_key function from helpers.py"""
