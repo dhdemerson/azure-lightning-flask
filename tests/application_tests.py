@@ -4,7 +4,7 @@ import unittest
 from mock import patch
 from azure.common import AzureMissingResourceHttpError
 from azure_lightning_flask.application import create_app
-from azure_lightning_flask.tests.test_config import TestConfig
+from tests.test_config import TestConfig
 
 class TestApplication(unittest.TestCase):
     """Tests for the azure_lightning_flask application"""
