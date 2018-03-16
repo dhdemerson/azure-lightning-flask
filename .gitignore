@@ -1,2 +1,5 @@
-
+.eggs/
+build/
+dist/
 *.pyc
+azure_lightning_flask.egg*
