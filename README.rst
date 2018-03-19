@@ -9,6 +9,17 @@ with Python 2.7
 
 Installation
 ------------
+It is recommended that you install and run azure_lightning_flask inside of a ``virtualenv``
+::
+
+    virtualenv venv
+    . venv/bin/activate
+
+Via pip
+~~~~~~~
+::
+
+    pip install azure_lightning_flask
 
 Manual
 ~~~~~~
