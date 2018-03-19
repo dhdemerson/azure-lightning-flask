@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='azure_lightning_flask',
-    version='0.0.1.dev2',
+    version='0.0.1',
     author='Hayden Demerson',
     description='Lightning deployment strategy on Azure with Flask',
     long_description=open('README.rst').read(),
